@@ -4,10 +4,12 @@ import java.util.InputMismatchException;
 public class Exp1
 {
     
+    @SuppressWarnings("unused")
     private static int getInteger(String varName)
     {
         boolean haveResult = false;
         int result = 0;
+        @SuppressWarnings("resource")
         Scanner stdin = new Scanner(System.in);
         
         while ( ! haveResult )
@@ -40,6 +42,7 @@ public class Exp1
     {
         boolean haveResult = false;
         float result = 0;
+        @SuppressWarnings("resource")
         Scanner stdin = new Scanner(System.in);
         
         while ( ! haveResult )
@@ -62,7 +65,7 @@ public class Exp1
     private static float exp1(float a, float b)
     {
         float result =
-            a + b * (- a + 1/b);
+            (1 + (a + b) * (a - 1/b));
         return result;
     }
   
